@@ -12,7 +12,7 @@ function writelog {
     if [ -z "${logfile}" ]; then
       logfile='/tmp/bash-toolbox.log'
     fi
-    echo "$(date '+%Y-%m-%d %H:%M:%S') - ${2}" >> "${1}"
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - ${text}" >> "${logfile}"
   fi
 }
 
