@@ -19,3 +19,18 @@ function checkFolder {
   fi
 }
 
+# @ getOwner
+# Description: Returns user:group owner of a file or folder
+# 1st param  : Full path to file/folder
+function getOwner {
+  local object="${1}"
+  local usr=$(stat -c '%U' ${object})
+  local grp=$(stat -c '%G' ${object})
+  if [ -z "${usr}" ]; then
+    echo 'ERR'
+  elif [ -z "${grp}" ]; then
+    echo 'ERR'
+  else
+    echo "${usr}:${grp}"
+  fi
+}
