@@ -19,5 +19,10 @@ printListItem 1 && showinscreen 'First level item' 'INF' \
 ```
 
 
+## Colaborators:
+  * Bruno Almada (test and debug)
+
+---
+
 This is a md file. (MarkDown):
 https://guides.github.com/features/mastering-markdown/
