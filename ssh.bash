@@ -54,7 +54,7 @@ function scpImproved {
 }
 
 
-# @ scpImproved
+# @ copySSHid
 # Description: Copy a key file into remote host without asking for password
 # 1st param  : The full path to key file (ssh public key file)
 # 2nd param  : user@host to copy the public key file
@@ -96,7 +96,7 @@ function copySSHid {
 # 1st param  : if 'pass' is used I will use 2nd parama as password
 #   * 2nd param  : the password to be used to login at remote hosts
 function createASKPASS {
-    local ask_pass_script="${WORKDIR}.askpass.$$"
+    local ask_pass_script="${WORKDIR}/.askpass.$$"
     local operation="${1}"
     local password="${2}"
     export DISPLAY=:0
