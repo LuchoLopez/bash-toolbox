@@ -23,7 +23,7 @@ function runSSHcmd {
 	else
         createASKPASS 'pass' "${pass}" &>/dev/null
 	    setsid ssh -oStrictHostKeyChecking=no -oLogLevel=error -oUserKnownHostsFile=/dev/null -oConnectTimeout=${TIMEOUT} ${userhost} "${cmd}" 2>/dev/null
-        [[ $? -eq 0 ]] && echo 'OK' || echo 'ERR'
+        [[ $? -ne 0 ]] &&  echo 'ERR'
         createASKPASS 'clean' &>/dev/null
     fi
 }
